@@ -23,6 +23,36 @@
 .login_container > button{
     margin-top: 50px;
     text-transform: inherit !important;
-    background-color: #0a8d48 !important;
+    background-color: #3549ff !important;
     color: white;
+}
+
+.form-field 
+{
+    display: flex;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+.form-field > form > div
+{
+    margin: 20px;    
+}
+
+form{
+    width: 100%;
+}
+
+.submit > Button
+{
+    margin-top: 10px;
+    text-transform: inherit !important;
+    background-color: #3549ff !important;
+    color: white;
+}
+
+input
+{
+    width: 235px;
+    height: 30px;
+    border: none;
 }

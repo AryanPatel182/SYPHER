@@ -21,10 +21,27 @@ function Login() {
     return (
         <div className="login">
            <div className="login_container">
-               <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt=""/> 
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTebRyQtgHDVfaavy19CsneLMSB91jrSXpSSA&usqp=CAU" alt=""/> 
                 <div className="login_text">
-                    <h1>Sign in to Whatsapp</h1>
+                    <h1>Sign in to Sypher</h1>
                 </div>
+                <div className='form-field'>
+                    <form>
+                        <div className='username'>
+                            <label>                            
+                                <input type="text" name="name" placeholder='Username'/>
+                            </label>
+                        </div>
+                        <div className='password'>                          
+                            <label>                             
+                                    <input type="text" name="password" placeholder='Password'/>
+                            </label>
+                        </div>
+                        <div className='submit'>                          
+                            <Button type="submit">Sign in</Button>
+                        </div>
+                    </form>
+                </div>              
                 <Button type="submit" onClick={signIn}>Sign in With Google</Button>
            </div>
         </div>

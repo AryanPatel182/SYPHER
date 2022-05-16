@@ -1,14 +1,16 @@
 import React, {useState,useEffect} from 'react';
 import './Sidebar.css';
-import {Avatar, IconButton} from "@material-ui/core";
+import { Avatar, IconButton } from "@material-ui/core";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import {SearchOutlined} from "@material-ui/icons";
 import SidebarChat from "./SidebarChat";
 import db from './firebase';
+import {LogoutIcon} from "@material-ui/icons"
 import { useStateValue } from './StateProvider';
-
+// import LogoutIcon from '@mui/icons-material/Logout';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 function Sidebar(props) {
 
     const [rooms, setRooms] = useState([]);
@@ -31,6 +33,10 @@ function Sidebar(props) {
         }
     },[]); 
 
+    function logout() {
+        window.location.reload(false);
+    }
+
     return (
         <div className="sidebar">
             <div className="sidebar_header">
@@ -42,8 +48,8 @@ function Sidebar(props) {
                     <IconButton>
                         <ChatIcon/>
                     </IconButton>
-                    <IconButton>
-                        <MoreVertIcon/>
+                    <IconButton onClick={logout}>
+                        <ExitToAppIcon/>
                     </IconButton>
                     
                 </div>
