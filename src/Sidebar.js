@@ -11,6 +11,8 @@ import {LogoutIcon} from "@material-ui/icons"
 import { useStateValue } from './StateProvider';
 // import LogoutIcon from '@mui/icons-material/Logout';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { Link } from 'react-router-dom';
+
 function Sidebar(props) {
 
     const [rooms, setRooms] = useState([]);
@@ -43,8 +45,12 @@ function Sidebar(props) {
     return (
         <div className="sidebar">
             <div className="sidebar_header">
-                <Avatar src={user?.photoURL}/>
-                {/* <h4> Logged in as {user.displayName}</h4> */}
+                <Link to={`/profile`}>
+                    <div>
+                        <Avatar src={user?.photoURL}/>
+                        <h5> Logged in as {user.displayName}</h5>
+                    </div>
+                </Link>
                 <div className="sidebar_headerRight">
                     <IconButton>
                         <DonutLargeIcon/>

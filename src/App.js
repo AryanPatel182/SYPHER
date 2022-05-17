@@ -5,6 +5,7 @@ import Chat from './Chat';
 import Login from './Login';
 import { BrowserRouter as Router,Switch, Route} from 'react-router-dom';
 import {useStateValue} from './StateProvider';
+import Profile from './Profile';
 
 
 
@@ -21,6 +22,9 @@ function App() {
               <Switch>
                 <Route path="/rooms/:roomId">
                   <Chat/>
+                </Route>
+                <Route path="/profile">
+                  <Profile/>
                 </Route>
                 <Route path="/">
                   <Chat/>
