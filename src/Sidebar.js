@@ -15,6 +15,8 @@ function Sidebar(props) {
 
     const [rooms, setRooms] = useState([]);
     const [{user},dispatch] = useStateValue();
+    const [contacts, setContacts] = useState([]);
+    // const [clist, setClist] = useState([]);
 
     useEffect(() => {
         const unsubscribe = db.collection('rooms').onSnapshot(snapshot => (
@@ -32,6 +34,7 @@ function Sidebar(props) {
             unsubscribe();
         }
     },[]); 
+           
 
     function logout() {
         window.location.reload(false);
@@ -41,6 +44,7 @@ function Sidebar(props) {
         <div className="sidebar">
             <div className="sidebar_header">
                 <Avatar src={user?.photoURL}/>
+                {/* <h4> Logged in as {user.displayName}</h4> */}
                 <div className="sidebar_headerRight">
                     <IconButton>
                         <DonutLargeIcon/>
@@ -64,7 +68,7 @@ function Sidebar(props) {
                 <SidebarChat addNewChat/>
                 {rooms.map(room=> (
                     <SidebarChat key={room.id} id={room.id} name={room.data.name}/>
-                ))}
+                ))}                                             
             </div>
         </div>
     );

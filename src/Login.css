@@ -1,6 +1,5 @@
 .login{
-    background-color: #f8f8f8;
-    height: 100vh;
+    background: linear-gradient(135deg, #1f96ff, #ee9aff);    height: 100vh;
     width: 100vw;
     display: grid;
     place-items: center;
@@ -55,4 +54,9 @@ input
     width: 235px;
     height: 30px;
     border: none;
+}
+
+#register
+{
+    display:  none;
 }

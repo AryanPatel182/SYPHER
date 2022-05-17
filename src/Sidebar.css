@@ -29,6 +29,8 @@
 }
 
 .sidebar_header{
+    background-color: #2477e4;
+    color: white;
     display: flex;
     justify-content: space-between;
     padding: 20px;

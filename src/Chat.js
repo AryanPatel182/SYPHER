@@ -38,7 +38,7 @@ function Chat() {
         e.preventDefault();
         db.collection('rooms').doc(roomId).collection('messages').add({
             message: input,
-            name: user.displayName,
+            name: user.displayName,            
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         })
 
